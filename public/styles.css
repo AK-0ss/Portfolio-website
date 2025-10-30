@@ -1,0 +1,65 @@
+:root{
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6c757d;
+  --primary: #0d6efd;
+  --card: #f8f9fa;
+  --border: rgba(0,0,0,.1);
+}
+body.dark{
+  --bg: #0f1115;
+  --fg: #e6e6e6;
+  --muted: #a0a0a0;
+  --primary: #4da3ff;
+  --card: #161a20;
+  --border: rgba(255,255,255,.1);
+}
+
+html, body { height: 100%; }
+body{
+  background: var(--bg);
+  color: var(--fg);
+}
+.navbar, .bg-body-tertiary { background-color: var(--bg) !important; }
+.navbar .navbar-brand { color: var(--fg) !important; }
+.navbar-toggler { border-color: var(--border); }
+.navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(230, 230, 230, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+body.dark .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(230, 230, 230, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+.nav-link { color: var(--fg) !important; }
+.nav-link.active, .nav-link:hover { color: var(--primary) !important; }
+.form-check-label { color: var(--fg); }
+
+.bg-hero{ background: linear-gradient(180deg, rgba(13,110,253,0.06), transparent 60%); }
+.profile-pic{ width: 180px; height: 180px; object-fit: cover; }
+.section-title{ font-weight: 800; color: var(--fg); }
+.skill-card{
+  display:flex; align-items:center; gap:.75rem;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: .75rem; padding: .9rem 1rem; height: 100%;
+  color: var(--fg);
+}
+.skill-card i{ color: var(--primary); }
+.note-item{ background: var(--bg); color: var(--fg); border-color: var(--border) !important; }
+.bg-light-subtle{ background: var(--card); }
+
+/* Cards */
+.card { background: var(--card); color: var(--fg); border-color: var(--border); }
+.card-title { color: var(--fg); }
+.card-text { color: var(--muted); }
+
+/* Forms */
+.form-control, .form-label { color: var(--fg); }
+.form-control { background: var(--card); border-color: var(--border); }
+.form-control:focus { background: var(--card); color: var(--fg); border-color: var(--primary); }
+body.dark .form-control::placeholder { color: var(--muted); opacity: 0.6; }
+
+/* Links */
+a { color: var(--primary); }
+a:hover { color: var(--primary); opacity: 0.8; }
+
+/* Footer & Border */
+footer, .border-top { border-color: var(--border) !important; }
+footer { color: var(--muted); }
+
+/* Smooth scroll */
+html{ scroll-behavior: smooth; }
